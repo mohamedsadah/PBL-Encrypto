@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="end">
+
+   <androidx.cardview.widget.CardView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       app:cardCornerRadius="10dp"
+       >
+
+    <TextView
+        android:id="@+id/tvMessage"
+        android:background="@drawable/bg_bubble_sent"
+        android:padding="16dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:text="how are you doing"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+   </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="11:39 PM"
+        android:textSize="10sp"
+        android:textColor="@color/white"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="4dp"/>
+
+</LinearLayout>

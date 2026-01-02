@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#E1FFFFFF"
+    android:clickable="true"
+    android:backgroundTint="@color/black"
+    android:focusable="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ToolbarHolder"
+        android:background="@color/black"
+        >
+        <com.google.android.material.appbar.MaterialToolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Toolbar"
+            app:navigationIcon="@drawable/ic_back"
+            app:navigationIconTint="@color/white"
+            android:layout_marginTop="45dp"
+            app:title="contacts"
+            app:titleTextAppearance="@style/TextAppearance.Material3.TitleMedium.Emphasized"
+            app:titleTextColor="@color/white"/>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvContacts"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ToolbarHolder"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/NoContacts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="30dp"
+            app:cardCornerRadius="20dp"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            android:backgroundTint="@color/black"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No Nexus Contacts Found"
+                android:textSize="16sp"
+                android:padding="20dp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textColor="@color/white"/>
+
+        </androidx.cardview.widget.CardView>
+
+    <ProgressBar
+        android:id="@+id/progressContacts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+</RelativeLayout>

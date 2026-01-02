@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0B0B0D">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/img"
+        android:scaleType="centerCrop"
+        android:alpha=".8"
+        android:contentDescription="profilesbg"
+        />
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="15dp"
+        android:layout_centerInParent="true"
+        android:layout_margin="25dp"
+        app:strokeColor="@color/black"
+        >
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:background="@color/black"
+            android:gravity="center_horizontal">
+
+            <ImageView
+                android:id="@+id/imgAvatar"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/ic_person"
+                android:contentDescription="User Avatar"
+                android:layout_marginTop="50dp"/>
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="User Name"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="32dp"/>
+
+            <Button
+                android:id="@+id/btnChangeAvatar"
+                android:layout_width="match_parent"
+                style="@style/Widget.Material3.Button.TextButton.Dialog"
+                android:layout_height="60dp"
+                android:text="Change Profile Picture"
+                android:layout_marginTop="12dp"/>
+
+            <Button
+                android:id="@+id/btnChangePassword"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                style="@style/Widget.Material3.Button.TextButton.Dialog"
+                android:text="Change Password"
+                android:layout_marginTop="12dp"/>
+
+            <Button
+                android:id="@+id/btnLogout"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="Logout"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="50dp"
+                style="@style/Widget.Material3.Button.TextButton.Dialog"
+                android:textColor="@android:color/holo_red_light"
+                app:strokeColor="@android:color/holo_red_light"/>
+
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</RelativeLayout>
